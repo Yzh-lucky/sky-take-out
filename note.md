@@ -8,4 +8,10 @@
 - ThreadLocal：是线程局部变量，在这个线程中都可以直接使用，具有**线程隔离**
 ## 三、依赖工具
 - PageHelper：分页工具类，使用PageHelper.startPage()方法分页，自动在查询语句中添加分页条件（limit）
-
+## 四、springmvc配置类（继承WebMvcConfigurationSupport）
+- 该类继承自WebMvcConfigurationSupport类，用于扩展springmvc的配置
+- 该类中可以重写extendMessageConverters方法，用于扩展消息转换器，扩展或替换默认的消息转换器，控制**请求/响应的数据格式**转换。
+- 该类中可以重写addInterceptors方法，用于添加拦截器
+- 该类中可以重写addResourceHandlers方法，用于添加资源处理器
+- 该类中可以重写addViewControllers方法，用于添加视图控制器
+- 跨域配置：在该类中重写addCorsMappings方法，用于添加跨域映射
